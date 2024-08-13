@@ -37,6 +37,17 @@ dependencies:
   cupertino_icons: ^1.0.8
   iconsax: ^0.0.8
   get: ^4.6.6
+  http: ^1.2.2
+  intl: ^0.19.0
+  logger: ^2.4.0
+  url_launcher: ^6.3.0
+  flutter_native_splash: ^2.4.1
+  smooth_page_indicator: ^1.2.0+3
+  get_storage: ^2.1.1
+  readmore: ^3.0.0
+  carousel_slider: ^5.0.0
+  flutter_rating_bar: ^4.0.1
+  capped_progress_indicator: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -62,12 +73,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/icons/
-    - assets/icons/brands/
-    - assets/images/
-    - assets/fonts/
     - assets/logos/
-    - images/a_dot_ham.jpeg
+    - assets/icons/brands/
+    - assets/images/content/
+    - assets/images/banners/
+    - assets/images/reviews/
+    - assets/images/products/
+    - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
+    - assets/images/on_boarding_images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
