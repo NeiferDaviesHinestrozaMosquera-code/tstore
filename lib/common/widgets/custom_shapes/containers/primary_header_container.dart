@@ -31,6 +31,7 @@ final Widget child;
                   child: TCirvularContainer(
                     backgroundColor: TColors.textWhite.withOpacity(0.1),
                   )),
+                  child,
             ],
           ),
         ),

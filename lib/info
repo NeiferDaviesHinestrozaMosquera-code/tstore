@@ -1,0 +1,1 @@
+ //width: MediaQuery.of(context).size.width * 0.8, // Ejemplo de ancho responsivo
