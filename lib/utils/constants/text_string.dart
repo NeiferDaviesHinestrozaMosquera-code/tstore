@@ -61,8 +61,8 @@ class TTexts {
 
   // -- Home
   static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "Davies Dev";
-
+  static const String homeAppbarSubTitle = "Davies Dev - Nirobi";
+  static const String homeSearchSubTitle = "Search in Store Nirobi";
 
 }
 

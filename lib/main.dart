@@ -3,7 +3,6 @@ import 'package:tstore/app.dart';
 
 void main() {
 
-  
   runApp(const MyApp());
 }
 

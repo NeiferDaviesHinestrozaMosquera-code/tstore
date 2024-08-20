@@ -9,7 +9,7 @@ class OnBoardingController  extends GetxController {
   Rx<int> currentPageIndex = 0.obs;
 
   void updatePageIndicator (index) {
- currentPageIndex.value = index;
+  currentPageIndex.value = index;
   }
 
   void dotNavigationClick(index) {
@@ -19,7 +19,7 @@ class OnBoardingController  extends GetxController {
 
   void nextPage () {
     if(currentPageIndex.value == 2){
-     Get.offAll(LoginScreen());
+     Get.offAll(() => const LoginScreen()); //SE CAMBIO ACA SE AGREGO EL () =>
     } else  {
       int page = currentPageIndex.value + 1 ;
       pageController.jumpToPage(page);
@@ -27,7 +27,7 @@ class OnBoardingController  extends GetxController {
   }
 
   void skipPage() {
-currentPageIndex.value = 2;
+  currentPageIndex.value = 2;
     pageController.jumpTo(2);
   }
 }

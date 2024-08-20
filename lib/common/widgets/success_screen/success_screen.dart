@@ -10,7 +10,6 @@ import 'package:tstore/utils/helpers/helper_functions.dart';
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

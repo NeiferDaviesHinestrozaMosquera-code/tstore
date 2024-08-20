@@ -14,7 +14,7 @@ final Widget child;
     return TCurvedEdgeWidget(
       child: Container(
         color: TColors.primary,
-        padding: EdgeInsets.all(0), 
+        padding: const EdgeInsets.all(0), 
         child: SizedBox(
           height: 400,
           child: Stack(
@@ -22,13 +22,13 @@ final Widget child;
               Positioned(
                   top: -150,
                   right: -250,
-                  child: TCirvularContainer(
+                  child: TCircularContainer(
                     backgroundColor: TColors.textWhite.withOpacity(0.1),
                   )),
               Positioned(
                   top: 100,
                   right: -300,
-                  child: TCirvularContainer(
+                  child: TCircularContainer(
                     backgroundColor: TColors.textWhite.withOpacity(0.1),
                   )),
                   child,
