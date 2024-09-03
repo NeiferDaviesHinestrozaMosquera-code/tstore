@@ -32,7 +32,7 @@ class THomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        TCartCounterIcon(onPressed: () {  },iconColor: TColors.white,)
+        TCartCounterIcon(onPressed: () {  })
       ],
     );
   }

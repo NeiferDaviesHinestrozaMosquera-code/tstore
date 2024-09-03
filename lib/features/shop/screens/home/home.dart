@@ -8,6 +8,7 @@ import 'package:tstore/common/widgets/custom_shapes/containers/search_container.
 import 'package:tstore/common/widgets/image_text/vertical_image_text.dart';
 import 'package:tstore/common/widgets/images/trounded_image.dart';
 import 'package:tstore/common/widgets/products/products_card/product_card_vertfical.dart';
+import 'package:tstore/common/widgets/texts/product_price.dart';
 import 'package:tstore/common/widgets/texts/section_heading.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_categories.dart';
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
 
                     //Heading
-                    TSectionHeading(),
+                    TSectionHeading(title: 'Popular Categories',showActionButton: false,),
                     SizedBox(height: TSizes.spaceBtwItems,),
 
                     ///Categories
@@ -72,13 +73,16 @@ class HomeScreen extends StatelessWidget {
                 TPromoSlider(),
                 SizedBox(height: TSizes.spaceBtwSections,),
 
+                ///Heading
+                TSectionHeading(title: 'Popular Products',onPressed: (){},),
+                SizedBox(height: TSizes.spaceBtwItems,),
+
                 //Popular Products
                 TGridLayout(itemBuilder:(_,index) => TProductCardVertical() , itemCount: 4,)
                 //TProductCardVertical()
               ],
             )
-          )
-
+          ),
         ],
       ),
     ));

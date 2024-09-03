@@ -4,6 +4,7 @@ import 'package:tstore/common/styles/shadow.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tstore/common/widgets/icons/cirular_icon.dart';
 import 'package:tstore/common/widgets/images/trounded_image.dart';
+import 'package:tstore/common/widgets/texts/brand_title_text.dart';
 import 'package:tstore/common/widgets/texts/product_price.dart';
 import 'package:tstore/common/widgets/texts/product_title.dart';
 import 'package:tstore/utils/constants/colors.dart';
@@ -53,7 +54,7 @@ class TProductCardVertical extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text(
-                        "25&",
+                        "25%",
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!
@@ -93,27 +94,22 @@ class TProductCardVertical extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                      Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      )
-                    ],
-                  ),
-      
+                  TBrandTitleText(title: 'Nike',), ///REVISAR ESOT IMPORTANTE 
+
+                  
+                ],
+              ),
+            ),
+            Spacer(),
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //Price
-                     TProductPriceText(price: "35.5",),
+                     Padding(
+                       padding: const EdgeInsets.only(left: TSizes.sm),
+                       child: TProductPriceText(price: "35.5",),
+                     ),
                       Container(
                         decoration: BoxDecoration(
                           color: TColors.dark,
@@ -131,12 +127,10 @@ class TProductCardVertical extends StatelessWidget {
                     ],
                   )
       
-                ],
-              ),
-            )
           ],
         ),
       ),
     );
   }
 }
+

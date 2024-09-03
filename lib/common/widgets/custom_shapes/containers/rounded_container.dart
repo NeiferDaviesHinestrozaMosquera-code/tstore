@@ -10,7 +10,7 @@ class TRoundedContianer extends StatelessWidget {
        this.radius = TSizes.cardRadiusLg,
       this.child,
        this.showBorder = false,
-       this.borderColor = TColors.white,
+       this.borderColor = TColors.grey,
        this.backgroundColor = TColors.borderPrimary,
       this.padding,
       this.margin
