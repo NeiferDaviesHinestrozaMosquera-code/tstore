@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/enums.dart';
-import 'package:tstore/utils/constants/sizes.dart';
 
 class TBrandTitleText extends StatelessWidget {
   const TBrandTitleText({

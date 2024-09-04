@@ -15,7 +15,7 @@ class ResentPasswordScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(onPressed: ()=> Get.back(), icon: Icon(Icons.clear))
+          IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.clear))
         ],
       ),
       body: SingleChildScrollView(
@@ -41,7 +41,7 @@ class ResentPasswordScreen extends StatelessWidget {
               ///BUTTONS
               SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>const LoginScreen()), child: const Text(TTexts.done)),),
               const SizedBox(height: TSizes.spaceBtwItems,),
-              SizedBox(width: double.infinity,child: TextButton(onPressed: (){print('${TTexts.resendEmail}');}, child: const Text(TTexts.resendEmail)),),
+              SizedBox(width: double.infinity,child: TextButton(onPressed: (){print(TTexts.resendEmail);}, child: const Text(TTexts.resendEmail)),),
 
             ],
           ),

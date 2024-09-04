@@ -22,10 +22,10 @@ class SignUpScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ///TITLE
-              TTitleHeader(),
+              const TTitleHeader(),
               const SizedBox(height: TSizes.spaceBtwSections),
               //Form
-              TSignUpForm(),
+              const TSignUpForm(),
               const SizedBox(height: TSizes.spaceBtwSections),
               //Diivider
               TFormDivider(dividerText: TTexts.orSignUpWith.capitalize!),

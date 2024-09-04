@@ -24,7 +24,7 @@ class TProductCardVertical extends StatelessWidget {
       },
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
             boxShadow: [TShadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(TSizes.productImageRadius),
@@ -35,12 +35,12 @@ class TProductCardVertical extends StatelessWidget {
             ///Thmbnail
             TRoundedContianer(
               height: 180,
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.white,
               child: Stack(
                 children: [
                   ///Image
-                  TRoundedImage(
+                  const TRoundedImage(
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
                   ),
@@ -51,7 +51,7 @@ class TProductCardVertical extends StatelessWidget {
                     child: TRoundedContianer(
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text(
                         "25%",
@@ -64,7 +64,7 @@ class TProductCardVertical extends StatelessWidget {
                   ),
       
                   //Favorite
-                  Positioned(
+                  const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
@@ -77,12 +77,12 @@ class TProductCardVertical extends StatelessWidget {
                 ///Image
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
       
             ///Details
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,25 +100,25 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
                   
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //Price
-                     Padding(
-                       padding: const EdgeInsets.only(left: TSizes.sm),
+                     const Padding(
+                       padding: EdgeInsets.only(left: TSizes.sm),
                        child: TProductPriceText(price: "35.5",),
                      ),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: TColors.dark,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(TSizes.cardRadiusMd),
                             bottomRight: Radius.circular(TSizes.productImageRadius)
                             ),
                         ),
-                        child: SizedBox(
+                        child: const SizedBox(
                           width: TSizes.iconLg * 1.2,
                           height: TSizes.iconLg * 1.2,
                           child: Center(child: Icon(Iconsax.add , color: TColors.white,))

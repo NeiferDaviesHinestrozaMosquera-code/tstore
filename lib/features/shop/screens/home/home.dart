@@ -1,24 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/layouts/grid_layout.dart';
-import 'package:tstore/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:tstore/common/widgets/image_text/vertical_image_text.dart';
-import 'package:tstore/common/widgets/images/trounded_image.dart';
 import 'package:tstore/common/widgets/products/products_card/product_card_vertfical.dart';
-import 'package:tstore/common/widgets/texts/product_price.dart';
 import 'package:tstore/common/widgets/texts/section_heading.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_promo_slider.dart';
-import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
-import 'package:tstore/utils/constants/text_string.dart';
-import 'package:tstore/utils/device/device_utility.dart';
-import 'package:tstore/utils/helpers/helper_functions.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -31,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         children: [
           //Header
-          TPrimaryHeaderContainer(
+          const TPrimaryHeaderContainer(
             child: Column(
             children: [
 
@@ -70,15 +59,15 @@ class HomeScreen extends StatelessWidget {
               children: [
 
                 //Promo Slider
-                TPromoSlider(),
-                SizedBox(height: TSizes.spaceBtwSections,),
+                const TPromoSlider(),
+                const SizedBox(height: TSizes.spaceBtwSections,),
 
                 ///Heading
                 TSectionHeading(title: 'Popular Products',onPressed: (){},),
-                SizedBox(height: TSizes.spaceBtwItems,),
+                const SizedBox(height: TSizes.spaceBtwItems,),
 
                 //Popular Products
-                TGridLayout(itemBuilder:(_,index) => TProductCardVertical() , itemCount: 4,)
+                TGridLayout(itemBuilder:(_,index) => const TProductCardVertical() , itemCount: 4,)
                 //TProductCardVertical()
               ],
             )

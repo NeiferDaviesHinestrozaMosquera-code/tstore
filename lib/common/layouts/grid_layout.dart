@@ -18,7 +18,7 @@ class TGridLayout extends StatelessWidget {
       itemCount: itemCount,
       shrinkWrap: true,
       padding: EdgeInsets.zero,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
 
       ///ESTO DA ESPACIO EXTRA PARA MOSTRAR TODA LA INFORMACION
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

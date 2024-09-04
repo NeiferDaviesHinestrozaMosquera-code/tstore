@@ -25,7 +25,7 @@ class TPromoSlider extends StatelessWidget {
             autoPlay: true,
           )
         ),
-        SizedBox(height: TSizes.spaceBtwItems,),
+        const SizedBox(height: TSizes.spaceBtwItems,),
     
         //CODIGO MUERTO
         // Row(
