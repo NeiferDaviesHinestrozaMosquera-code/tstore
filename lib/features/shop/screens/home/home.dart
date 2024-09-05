@@ -7,6 +7,7 @@ import 'package:tstore/common/widgets/texts/section_heading.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:tstore/features/shop/screens/home/widgets/home_promo_slider.dart';
+import 'package:tstore/utils/constants/enums.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 
 
@@ -47,7 +48,8 @@ class HomeScreen extends StatelessWidget {
                     //SizedBox(height: TSizes.spaceBtwItems,),
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: TSizes.spaceBtwSections,)
             ],
           )
           ),
