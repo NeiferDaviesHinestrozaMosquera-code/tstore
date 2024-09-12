@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/widgets/appbar/appbar.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -6,6 +7,7 @@ import 'package:tstore/common/widgets/images/tcircular_image.dart';
 import 'package:tstore/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:tstore/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tstore/common/widgets/texts/section_heading.dart';
+import 'package:tstore/features/personalization/screens/address/address.dart';
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
@@ -41,7 +43,7 @@ class SettingsScreen extends StatelessWidget {
                 const TSectionHeading(title: "Account Settings",showActionButton: false,),
                 const SizedBox(height: TSizes.spaceBtwItems,),
 
-                TSettingsMenuTile(icon: Iconsax.safe_home, title: "My Address", subTitle: "subTitle", onTap: () { print("Boton de "); }, ),
+                TSettingsMenuTile(icon: Iconsax.safe_home, title: "My Address", subTitle: "subTitle", onTap: () => Get.to(()=> UserAddressScreen())),
                 TSettingsMenuTile(icon: Iconsax.shopping_cart, title: "My Cart", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
                 TSettingsMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
                 TSettingsMenuTile(icon: Iconsax.bank, title: "Bank Account", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),

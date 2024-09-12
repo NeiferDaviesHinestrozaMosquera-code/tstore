@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/widgets/appbar/appbar.dart';
 import 'package:tstore/common/widgets/custom_shapes/curved_edges/custom_curved_edge_widget.dart';
@@ -10,6 +11,7 @@ import 'package:tstore/features/shop/screens/product_details/widget/product_attr
 import 'package:tstore/features/shop/screens/product_details/widget/product_detail_image_slider.dart';
 import 'package:tstore/features/shop/screens/product_details/widget/product_meta.data.dart';
 import 'package:tstore/features/shop/screens/product_details/widget/rating_share_widget.dart';
+import 'package:tstore/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
@@ -52,10 +54,11 @@ bottomNavigationBar: TBottomAddToCard(),
 
                     ///checkeout button
                     SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text("Checkout"))),
-
+                    const SizedBox(height: TSizes.spaceBtwItems,),
+                    
                     ///description
                     const TSectionHeading(title: "Description",showActionButton: false,),
-                    const SizedBox(height: TSizes.spaceBtwSections,),
+                    const SizedBox(height: TSizes.spaceBtwItems,),
                     const ReadMoreText(
                       "This is a producto descripcion and anything . I love Snaker",
                       trimLines: 2,
@@ -70,9 +73,13 @@ bottomNavigationBar: TBottomAddToCard(),
                     Divider(color: Colors.transparent,),
                     SizedBox(height: TSizes.spaceBtwItems,),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TSectionHeading(title: "Reviews(200)",onPressed: (){},),
-                        IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right3))
+                        TSectionHeading(title: "Reviews(200)",showActionButton: false,),
+                        IconButton(onPressed: () {
+                          Get.to(()=> ProductReviewsScreen() );
+                          print("TOCASTE EL BOTON DE LAS REVIEWS");
+                          }, icon: Icon(Iconsax.arrow_right_3,size: 18,))
                       ],
                     ),
                     const SizedBox(height: TSizes.spaceBtwSections,),

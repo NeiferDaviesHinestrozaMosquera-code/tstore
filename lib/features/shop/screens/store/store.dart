@@ -4,7 +4,7 @@ import 'package:tstore/common/widgets/appbar/appbar.dart';
 import 'package:tstore/common/widgets/appbar/tabbar.dart';
 import 'package:tstore/common/widgets/brands/brand_card.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:tstore/common/widgets/products_cart/cart_menu_icon.dart';
+import 'package:tstore/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:tstore/common/widgets/texts/section_heading.dart';
 import 'package:tstore/features/shop/screens/store/widget/category_tab.dart';
 import 'package:tstore/utils/constants/colors.dart';
