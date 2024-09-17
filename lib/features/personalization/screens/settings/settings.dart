@@ -8,6 +8,7 @@ import 'package:tstore/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:tstore/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tstore/common/widgets/texts/section_heading.dart';
 import 'package:tstore/features/personalization/screens/address/address.dart';
+import 'package:tstore/features/shop/screens/order/order.dart';
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
@@ -45,7 +46,7 @@ class SettingsScreen extends StatelessWidget {
 
                 TSettingsMenuTile(icon: Iconsax.safe_home, title: "My Address", subTitle: "subTitle", onTap: () => Get.to(()=> UserAddressScreen())),
                 TSettingsMenuTile(icon: Iconsax.shopping_cart, title: "My Cart", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
-                TSettingsMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
+                TSettingsMenuTile(icon: Iconsax.bag_tick, title: "My Orders", subTitle: "subTitle", onTap: () => Get.to(()=> OrderScreen())),
                 TSettingsMenuTile(icon: Iconsax.bank, title: "Bank Account", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
                 TSettingsMenuTile(icon: Iconsax.discount_shape, title: "My Coupons", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),
                 TSettingsMenuTile(icon: Iconsax.notification, title: "Notifications", subTitle: "subTitle", onTap: () { print("Boton de direccion"); }, ),

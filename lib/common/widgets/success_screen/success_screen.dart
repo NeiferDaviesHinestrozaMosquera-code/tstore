@@ -8,34 +8,56 @@ import 'package:tstore/utils/constants/text_string.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.onPress,
+  });
+
+  final String image, title, subTitle;
+  final VoidCallback onPress;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding:TSpacingStyle.paddingWithAppBarHeight * 2 ,
+          padding: TSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
-                ///IMAGE
+              /// IMAGE
               Image(
-                image: const AssetImage(TImages.staticSuccessIllustration),
+                image: AssetImage(image),
                 width: THelperFunctions.screenWidth() * .6,
               ),
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
-              ///TITLE
-              Text(TTexts.yourAccountCreatedTitle,style: Theme.of(context).textTheme.headlineMedium,textAlign: TextAlign.center,),
-              const SizedBox(height: TSizes.spaceBtwItems,),
-              Text(TTexts.yourAccountCreatedSubTitle,style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center,),
-              const SizedBox(height: TSizes.spaceBtwItems,),
+              /// TITLE
+              Text(
+                title,
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              Text(
+                subTitle,
+                style: Theme.of(context).textTheme.labelMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
 
-              ///BUTTONS
-              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>const LoginScreen()), child: const Text(TTexts.tContinue)),),
-
+              /// BUTTONS
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: onPress,
+                  child: const Text(TTexts.tContinue),
+                ),
+              ),
             ],
           ),
         ),
