@@ -21,7 +21,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () => Get.to(() => ProductDetailScreen()),
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -94,14 +94,11 @@ class TProductCardVertical extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  TBrandTitleText(title: 'Nike',), ///REVISAR ESOT IMPORTANTE 
-
-                  
+                  TBrandTitleText(title: 'Nike',), ///REVISAR ESOT IMPORTANTE          
                 ],
               ),
             ),
-            const Spacer(),
-                  
+            const Spacer(),     
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -112,7 +109,7 @@ class TProductCardVertical extends StatelessWidget {
                      ),
                       Container(
                         decoration: const BoxDecoration(
-                          color: TColors.dark,
+                          color: TColors.primary,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(TSizes.cardRadiusMd),
                             bottomRight: Radius.circular(TSizes.productImageRadius)
@@ -126,7 +123,6 @@ class TProductCardVertical extends StatelessWidget {
                       )
                     ],
                   )
-      
           ],
         ),
       ),

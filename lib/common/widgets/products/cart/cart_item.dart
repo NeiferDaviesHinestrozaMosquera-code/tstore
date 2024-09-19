@@ -21,10 +21,10 @@ class TCartItem extends StatelessWidget {
           imageUrl: TImages.productImage2,
           width: 60,
           height: 60,
-          padding: EdgeInsets.all(TSizes.sm),
+          padding: const EdgeInsets.all(TSizes.sm),
           backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkerGrey : TColors.light,
         ),
-        SizedBox(width: TSizes.spaceBtwItems,),
+        const SizedBox(width: TSizes.spaceBtwItems,),
     
         //Title , price and size
         Expanded(
@@ -32,8 +32,8 @@ class TCartItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment:CrossAxisAlignment.start,
             children: [
-              TBrandTitleWithVerifiedIcon(title: "Nike"),
-              Flexible(child: TProductTitleText(title: "Black Sport Shoes" , maxLines: 1,)),
+              const TBrandTitleWithVerifiedIcon(title: "Nike"),
+              const Flexible(child: TProductTitleText(title: "Black Sport Shoes" , maxLines: 1,)),
           
               //Attributes
               Text.rich(

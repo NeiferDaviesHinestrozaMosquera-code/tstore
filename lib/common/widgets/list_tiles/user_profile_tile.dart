@@ -13,7 +13,7 @@ class TUserProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: TCircularImage(
+      leading: const TCircularImage(
         image: TImages.user,
         width: 60,
         height: 60,
@@ -35,10 +35,10 @@ class TUserProfileTile extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ProfileScreen()),
+              MaterialPageRoute(builder: (context) => const ProfileScreen()),
             );
           },
-          icon: Icon(
+          icon: const Icon(
             Iconsax.edit,
             color: TColors.white,
           )),

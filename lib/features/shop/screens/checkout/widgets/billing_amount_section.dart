@@ -23,7 +23,7 @@ class TBillingAmountSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
 
         //Shipping free
         Row(
@@ -41,7 +41,7 @@ class TBillingAmountSection extends StatelessWidget {
           ],
         ),
 
-        SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
 
         //Tax fee
         Row(
@@ -59,7 +59,7 @@ class TBillingAmountSection extends StatelessWidget {
           ],
         ),
 
-        SizedBox(height: TSizes.spaceBtwItems / 2),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
 
         //Order Total
         Row(

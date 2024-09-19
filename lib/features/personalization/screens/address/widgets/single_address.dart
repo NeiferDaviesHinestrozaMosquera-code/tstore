@@ -13,12 +13,12 @@ class TSingleAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return TRoundedContianer(
-      padding: EdgeInsets.all(TSizes.md),
+      padding: const EdgeInsets.all(TSizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress ? TColors.primary.withOpacity(0.5) : Colors.transparent,
       borderColor: selectedAddress ? Colors.transparent : dark ? TColors.darkerGrey : TColors.grey,
-      margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(right: 5,top: 0, child: Icon(selectedAddress ? Iconsax.tick_circle5 : null , color: selectedAddress ? dark ? TColors.light : TColors.dark : null,)),
@@ -26,11 +26,11 @@ class TSingleAddress extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("John Hon" , maxLines: 1, overflow: TextOverflow.ellipsis,style: Theme.of(context).textTheme.titleLarge,),
-              SizedBox(height: TSizes.sm / 2,),
-              Text("+1 304283922" , maxLines: 1,overflow: TextOverflow.ellipsis,),
-              SizedBox(height: TSizes.sm / 2,),
-              Text("33122 Street way , Miami Florida , 33122 , USA" ,softWrap: true,),
-              SizedBox(height: TSizes.sm / 2,),
+              const SizedBox(height: TSizes.sm / 2,),
+              const Text("+1 304283922" , maxLines: 1,overflow: TextOverflow.ellipsis,),
+              const SizedBox(height: TSizes.sm / 2,),
+              const Text("33122 Street way , Miami Florida , 33122 , USA" ,softWrap: true,),
+              const SizedBox(height: TSizes.sm / 2,),
             ],
           )
         ],

@@ -19,23 +19,23 @@ class TBillingAddressSection extends StatelessWidget {
 
         Row(
           children: [
-            Icon(Icons.phone , color: Colors.grey , size: 16,),
-            SizedBox(width: TSizes.spaceBtwItems),
+            const Icon(Icons.phone , color: Colors.grey , size: 16,),
+            const SizedBox(width: TSizes.spaceBtwItems),
             Text("+822328932",style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),
 
-        SizedBox(height: TSizes.spaceBtwItems / 2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2,),
 
          Row(
           children: [
-            Icon(Icons.map , color: Colors.grey , size: 16,),
-             SizedBox(height: TSizes.spaceBtwItems / 2,),
+            const Icon(Icons.map , color: Colors.grey , size: 16,),
+             const SizedBox(height: TSizes.spaceBtwItems / 2,),
             Expanded(child: Text("Away South Park 230 , Miami , Fl , Usa",style: Theme.of(context).textTheme.bodyMedium,softWrap: true,))
           ],
         ),
 
-        SizedBox(height: TSizes.spaceBtwItems / 2,)
+        const SizedBox(height: TSizes.spaceBtwItems / 2,)
       ],
     );
   }

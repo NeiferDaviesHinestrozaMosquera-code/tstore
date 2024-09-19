@@ -15,12 +15,12 @@ class TCartItems extends StatelessWidget {
           itemBuilder: (_,index) => Column(
             children: [
               //
-              TCartItem(),
+              const TCartItem(),
 
-              if(showAddRemoveButtons) SizedBox(height: TSizes.spaceBtwItems,),
+              if(showAddRemoveButtons) const SizedBox(height: TSizes.spaceBtwItems,),
 
               //Add Remove button row with total price
-              if(showAddRemoveButtons) Row(
+              if(showAddRemoveButtons) const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
@@ -36,7 +36,7 @@ class TCartItems extends StatelessWidget {
               )
             ],
           ), 
-          separatorBuilder: (_,__) => SizedBox(height: TSizes.spaceBtwSections,), 
+          separatorBuilder: (_,__) => const SizedBox(height: TSizes.spaceBtwSections,), 
           itemCount: 4);
   }
 }

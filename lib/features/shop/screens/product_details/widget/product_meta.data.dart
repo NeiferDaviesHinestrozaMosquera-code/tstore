@@ -40,13 +40,13 @@ class TProductMetaData extends StatelessWidget {
         const SizedBox(width: TSizes.spaceBtwItems / 1.5),
 
         //Title
-        TProductTitleText(title: 'Green Nike Sport'),
+        const TProductTitleText(title: 'Green Nike Sport'),
         const SizedBox(width: TSizes.spaceBtwItems / 1.5),
 
         //Stock Statud
         Row(
           children: [
-            TProductTitleText(title: 'Status'),
+            const TProductTitleText(title: 'Status'),
             const SizedBox(width: TSizes.spaceBtwItems),
             Text('In Stock' , style: Theme.of(context).textTheme.titleMedium,),
           ],
@@ -57,7 +57,7 @@ class TProductMetaData extends StatelessWidget {
         Row(
           children: [
             TCircularImage(image: TImages.shoeIcon , width: 32,height: 32,overlayColor: darkMode ? TColors.white : TColors.black,),
-            TBrandTitleWithVerifiedIcon(title: "Nike", brandTextSizes: TextSizes.medium,)
+            const TBrandTitleWithVerifiedIcon(title: "Nike", brandTextSizes: TextSizes.medium,)
           ]
         )
 

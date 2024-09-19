@@ -16,7 +16,7 @@ final Color? color;
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        IconButton(onPressed: ()=> Get.to(()=> CartScreen() ), icon: Icon(Iconsax.shopping_bag , color: color),iconSize: 40,),
+        IconButton(onPressed: ()=> Get.to(()=> const CartScreen() ), icon: Icon(Iconsax.shopping_bag , color: color),iconSize: 40,),
         Positioned(
           right: 0,
           child: Container(

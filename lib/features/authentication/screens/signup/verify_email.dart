@@ -45,7 +45,7 @@ class VerifyEmailScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems,),
 
               ///BUTTONS
-              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>SuccessScreen(image: TImages.staticSuccessIllustration,title: TTexts.yourAccountCreatedTitle,subTitle: TTexts.yourAccountCreatedSubTitle,onPress: () => Get.to(()=> LoginScreen()),)),child: const Text(TTexts.tContinue),),),  ///ESTO SE MODIFICO DEBIDO AL CARRITO
+              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>SuccessScreen(image: TImages.staticSuccessIllustration,title: TTexts.yourAccountCreatedTitle,subTitle: TTexts.yourAccountCreatedSubTitle,onPress: () => Get.to(()=> const LoginScreen()),)),child: const Text(TTexts.tContinue),),),  ///ESTO SE MODIFICO DEBIDO AL CARRITO
               const SizedBox(height: TSizes.spaceBtwItems,),
               SizedBox(width: double.infinity,child: TextButton(onPressed: (){}, child: const Text(TTexts.resendEmail)),),
 
