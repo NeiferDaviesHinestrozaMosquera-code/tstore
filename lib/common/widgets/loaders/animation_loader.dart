@@ -31,7 +31,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
           SizedBox(height: TSizes.defaultSpace,),
           showAction ?
              SizedBox(
-              width: 250, //250
+              width: 200, //250
               child: OutlinedButton(
                 onPressed: onActionPressed,
                 style: OutlinedButton.styleFrom(backgroundColor: TColors.dark), 

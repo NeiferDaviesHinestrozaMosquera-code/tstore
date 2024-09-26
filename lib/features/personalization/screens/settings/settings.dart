@@ -54,10 +54,10 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: TSizes.spaceBtwSections,),
                 const TSectionHeading(title: "App Settings",showActionButton: false,),
                 const SizedBox(height: TSizes.spaceBtwItems,),
-                TSettingsMenuTile(icon: Iconsax.document_upload, title: "Load Data", subTitle: "Upload Data to your Cloud Firebase" , trailing: Switch(value: true, onChanged: (value){}),),
-                TSettingsMenuTile(icon: Iconsax.security_user, title: "Safe Mode", subTitle: "Upload Data to your Cloud Firebase" , trailing: Switch(value: false, onChanged: (value){}),),
-                TSettingsMenuTile(icon: Iconsax.image, title: "HD Image Quality", subTitle: "Upload Data to your Cloud Firebase" , trailing: Switch(value: false, onChanged: (value){}),),
-                TSettingsMenuTile(icon: Iconsax.happyemoji, title: "Happy ?", subTitle: "Upload Data to your Cloud Firebase" , trailing: Switch(value: true, onChanged: (value){}),),
+                TSettingsMenuTile(icon: Iconsax.document_upload, title: "Load Data", subTitle: "Upload Data to your Cloud Firebase" ,),
+                TSettingsMenuTile(icon: Iconsax.happyemoji, title: "Geolocation", subTitle: "Set recommendation based en location" , trailing: Switch(value: true, onChanged: (value){}),),
+                TSettingsMenuTile(icon: Iconsax.security_user, title: "Safe Mode", subTitle: "Search result is safe for all ages" , trailing: Switch(value: false, onChanged: (value){}),),
+                TSettingsMenuTile(icon: Iconsax.image, title: "HD Image Quality", subTitle: "set image quality to be seen" , trailing: Switch(value: false, onChanged: (value){}),),
 
                 //Logout
                 const SizedBox(height: TSizes.spaceBtwSections,),

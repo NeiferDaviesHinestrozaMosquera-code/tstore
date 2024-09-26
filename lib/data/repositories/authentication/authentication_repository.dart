@@ -52,6 +52,23 @@ class AuthenticationRepository extends GetxController {
   }
 
   //Sign In
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong please try again';
+    }
+  }
 
   ///Sign up
   Future<UserCredential> registerWithEmailAndPassword(
@@ -98,7 +115,6 @@ class AuthenticationRepository extends GetxController {
   ///facebook
 
   ///valid for any auth
-
   Future<void> logout() async {
     try {
       await _auth.signOut();
