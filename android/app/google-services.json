@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709876168089",
+    "project_id": "tstorev3",
+    "storage_bucket": "tstorev3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709876168089:android:bb59213da4fc45ce574f08",
+        "android_client_info": {
+          "package_name": "com.example.tstore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0zKXvsskqCy1IGn3E4LOyw_cIsymZrvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
