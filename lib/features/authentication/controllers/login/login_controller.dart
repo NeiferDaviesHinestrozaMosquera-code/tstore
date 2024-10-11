@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tstore/common/widgets/loaders/loader.dart';
 import 'package:tstore/data/repositories/authentication/authentication_repository.dart';
+import 'package:tstore/features/personalization/controllers/user_controller.dart';
 import 'package:tstore/utils/connected/network_manager.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/popups/full_screen_loader.dart';
@@ -17,11 +18,11 @@ class LoginController extends GetxController{
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
-
+  final userController = Get.put(UserController());
   @override
   void onInit() {
-    email.text = localStorage.read('REMEMBER_ME_EMAIL');
-    password.text = localStorage.read('REMEMBER_ME_PASSWORD');
+    email.text = localStorage.read('REMEMBER_ME_EMAIL') ?? ''; ///null si no hay un valor almacenado en la memoria local para esas claves
+    password.text = localStorage.read('REMEMBER_ME_PASSWORD') ?? '';
     super.onInit();
   }
 
@@ -63,6 +64,38 @@ class LoginController extends GetxController{
     } catch (e){
       TFullScreenLoader.stopLoading();
       TLoaders.errorSnackBar(title: 'Oh Snap Login' , message: e.toString());
+    }
+  }
+
+  //google Signin Auth
+  Future<void> googleSignIn() async {
+    try {
+      ///star
+      TFullScreenLoader.openLoadingDialog('Logging you in...', TImages.googleAnimation);
+
+      //Internet
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
+
+      //Google Auth
+      final userCredentials = await AuthenticationRepository.instance.signInWithGoogle();
+
+      //Save user record
+      await userController.saveUserRecord(userCredentials);
+
+      //remove loader
+      TFullScreenLoader.stopLoading();
+
+      //Redirect
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      //remove loader
+      TFullScreenLoader.stopLoading();
+
+      TLoaders.errorSnackBar(title: 'Oh Snap Login Google' , message: e.toString());
     }
   }
 }

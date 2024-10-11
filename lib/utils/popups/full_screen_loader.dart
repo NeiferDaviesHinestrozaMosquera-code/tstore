@@ -17,8 +17,8 @@ class TFullScreenLoader {
           child: Column(
             children: [
               SizedBox(
-              height: 250,
-              child: TAnimationLoaderWidget(text: text, animation: animation,),
+              //height: 200,
+              child: Center(child: TAnimationLoaderWidget(text: text, animation: animation,)),
               )
             ],
           ),

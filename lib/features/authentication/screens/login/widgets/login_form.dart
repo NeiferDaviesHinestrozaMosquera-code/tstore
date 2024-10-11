@@ -27,7 +27,7 @@ class TLoginForm extends StatelessWidget {
               ///Email
               TextFormField(
                 controller: controller.email,
-                validator: (value) => TValidator.validateEmail(value),
+                validator: (value) => TValidator.validateEmail(value) ,
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.direct_right),
                   labelText: TTexts.email,
